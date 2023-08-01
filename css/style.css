@@ -1,0 +1,504 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.element {
+    height: 92px;
+    position: relative;
+}
+
+.element-left::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: -webkit-radial-gradient(center, circle, rgb(46, 46, 46), rgb(33, 33, 33), rgb(16, 16, 16), rgb(0, 0, 0), black);
+    border: 5px solid brown;
+    border-radius: 50%;
+    right: 105vw;
+    top: 105vh;
+
+    animation: left-pockets 1.5s ease-in-out 7s 1 normal both;
+}
+
+.element-right::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: -webkit-radial-gradient(center, circle, rgb(46, 46, 46), rgb(33, 33, 33), rgb(16, 16, 16), rgb(0, 0, 0), black);
+    border: 5px solid brown;
+    border-radius: 50%;
+    left: 105vw;
+    top: 105vh;
+
+    animation-name: right-pockets;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    
+}
+
+@keyframes left-pockets {
+    to {
+        right: 0;
+        top: 40px;
+    }
+}
+
+@keyframes right-pockets {
+    to {
+        left: 0;
+        top: 40px;
+    }
+}
+
+/* ///////////////////////////////////// */
+
+/* left img */
+img:not(:first-child) {
+    position: absolute;
+    width: 350px;
+    left: -350px;
+
+    animation-name: left-stick;
+    animation-duration: 0.5s;
+    animation-delay: 10.8s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+/* left ball */
+.left {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: -webkit-radial-gradient(center, circle, white, orange, rgb(238, 155, 0), rgb(222, 144, 0), rgb(197, 128, 0), orangered);
+    position: absolute;
+    transform: scale(0);
+    top: 55px;
+    left: 55px;
+
+    animation-name: left-ball-start, left-ball;
+    animation-duration: 0.5s, 4s;
+    animation-delay: 9.3s, 11.2s;
+    animation-timing-function: ease-in-out, ease-out;
+    animation-fill-mode: both, both;
+}
+
+/* right img */
+.element-right img {
+    left: 1533px;
+    transform: rotateX(180deg);
+
+    animation-name: right-stick;
+    animation-duration: 0.5s;
+    animation-delay: 15s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+/* right ball */
+.right {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(0);
+    top: 55px;
+    left: 1446px;
+    background: -webkit-radial-gradient(center, circle, white, rgb(0, 76, 255), rgb(0, 76, 210), rgb(0, 76, 171), rgb(0, 76, 126), rgb(0, 76, 35));
+
+    animation-name: right-ball-start, right-ball;
+    animation-duration: 0.5s, 4s;
+    animation-delay: 9.3s, 15.4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+#image3 {
+    animation-delay: 19.2s;
+}
+
+.ball3 {
+    animation-delay: 9.3s, 19.6s;
+    background: -webkit-radial-gradient(center, circle, white, orangered, rgb(240, 64, 0), rgb(227, 61, 0), rgb(204, 54, 0), rgb(129, 34, 0));
+}
+
+#image4 {
+    animation-delay: 23.4s;
+}
+
+.ball4 {
+    animation-delay: 9.3s, 23.8s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(255, 1, 255), rgb(231, 0, 231), rgb(197, 0, 197), rgb(181, 0, 181), purple);
+}
+
+#image5 {
+    animation-delay: 27.6s;
+}
+
+.ball5 {
+    animation-delay: 9.3s, 28s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(0, 255, 0), rgb(0, 224, 0), rgb(0, 185, 0), rgb(0, 150, 0), green);
+}
+
+#image6 {
+    animation-delay: 31.8s;
+}
+
+.ball6 {
+    animation-delay: 9.3s, 32.2s;
+    background: -webkit-radial-gradient(center, circle, white, red, rgb(234, 0, 0), rgb(221, 0, 0), rgb(192, 0, 0), rgb(163, 0, 0), rgb(157, 0, 0));
+}
+
+#image7 {
+    animation-delay: 36s;
+}
+
+.ball7 {
+    animation-delay: 9.3s, 36.4s;
+    background: -webkit-radial-gradient(center, circle, white, yellow, rgb(237, 237, 0), rgb(218, 218, 0), rgb(196, 196, 0), rgb(174, 174, 0), rgb(157, 157, 0));
+}
+
+#image8 {
+    animation-delay: 40.2s;
+}
+
+.ball8 {
+    animation-delay: 9.3s, 40.6s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(44, 44, 44), rgb(39, 39, 39), rgb(30, 30, 30), rgb(18, 18, 18), rgb(14, 14, 14), black);
+}
+
+
+@keyframes left-stick {
+    to {
+        left: -290px;
+    }
+}
+
+@keyframes right-stick {
+    to {
+        left: 1470px;
+    }
+}
+
+@keyframes left-ball-start {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes right-ball-start {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes left-ball {
+    90% {
+        left: 97.3vw;
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        left: 97vw;
+        opacity: 0;
+    }
+}
+
+@keyframes right-ball {
+    90% {
+        left: 10px;
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        left: 10px;
+        opacity: 0;
+    }
+}
+
+/* /////////////////////////////////// */
+
+.background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    animation-name: bg;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 3.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.hello {
+    font-size: 70px;
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -30%);
+    color: green;
+    opacity: 0;
+    text-shadow: 1px 1px 10px rgb(0, 163, 0);
+}
+
+.message1 {
+    animation-name: msg1;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.message2 {
+    transform: translate(-45%, -30%);
+    animation-name: msg2;
+    animation-duration: 2s;
+    animation-delay: 1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes bg{
+    from {
+        top: 0;
+        left: 0;
+    }
+    to {
+        top: -880px;
+        left: 0;
+    }
+}
+
+@keyframes msg1 {
+    40% {
+        transform: translate(-40%, -50%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-40%, -50%);
+    }
+    80% {
+        transform: translate(-40%, -50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-40%, -70%);
+        opacity: 0;
+    }
+}
+
+@keyframes msg2 {
+    40% {
+        transform: translate(-45%, -50%);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-45%, -50%);
+    }
+    80% {
+        transform: translate(-45%, -50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-45%, -70%);
+        opacity: 0;
+    }
+}
+
+/* ////////////////////////////////// */
+
+.end {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 70px;
+    color: yellow;
+    text-shadow: 0px 0px 6px yellow;
+    text-transform: capitalize;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+
+    animation-name: end-task;
+    animation-duration: 1s;
+    animation-delay: 45.35s;
+    animation-fill-mode: both;
+}
+
+.me {
+    color: orangered;
+    text-shadow: 0px 0px 6px orangered;
+}
+
+/* 44.6   45.35   46.1 */
+
+.end .text-con {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 100px;
+}
+
+span {
+
+    display: inline-block;
+    transform: scale(0);
+    animation-name: spans;
+    animation-duration: 0.7s;
+    animation-delay: 46.1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+.span2 {
+    animation-delay: 46.6s;
+}
+
+.span3 {
+    animation-delay: 47.1s;
+}
+
+.span4 {
+    animation-delay: 47.6s;
+}
+
+.download {
+    display: block;
+    margin: auto;
+    width: 700px;
+    height: 60px;
+    border: 5px solid purple;
+    border-radius: 50%;
+
+    animation-name: spans, end-download;
+    animation-duration: 0.7s, 0.7s;
+    animation-delay: 48.6s, 50.6s;
+    animation-fill-mode: both, both;
+}
+
+.p2 {
+    transform: translateY(20%);
+    opacity: 0;
+
+    animation-name: abo-kamal;
+    animation-duration: 0.7s;
+    animation-delay: 49.6s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+}
+
+.loding {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* margin-right: 5px; */
+    background: -webkit-radial-gradient(center, circle, white, orange, rgb(238, 155, 0), rgb(222, 144, 0), rgb(197, 128, 0), orangered);
+
+    animation-name: loding;
+    animation-duration: 0.5s;
+    animation-delay: 52.1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.loding2 {
+    animation-delay: 52.35s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(0, 76, 255), rgb(0, 76, 210), rgb(0, 76, 171), rgb(0, 76, 126), rgb(0, 76, 35));
+}
+
+.loding3 {
+    animation-delay: 52.6s;
+    background: -webkit-radial-gradient(center, circle, white, orangered, rgb(240, 64, 0), rgb(227, 61, 0), rgb(204, 54, 0), rgb(129, 34, 0));
+}
+
+.loding4 {
+    animation-delay: 52.85s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(255, 1, 255), rgb(231, 0, 231), rgb(197, 0, 197), rgb(181, 0, 181), purple);
+}
+
+.loding5 {
+    animation-delay: 53.1s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(0, 255, 0), rgb(0, 224, 0), rgb(0, 185, 0), rgb(0, 150, 0), green);
+}
+
+.loding6 {
+    animation-delay: 53.35s;
+    background: -webkit-radial-gradient(center, circle, white, red, rgb(234, 0, 0), rgb(221, 0, 0), rgb(192, 0, 0), rgb(163, 0, 0), rgb(157, 0, 0));
+}
+
+.loding7 {
+    animation-delay: 53.6s;
+    background: -webkit-radial-gradient(center, circle, white, yellow, rgb(237, 237, 0), rgb(218, 218, 0), rgb(196, 196, 0), rgb(174, 174, 0), rgb(157, 157, 0));
+}
+
+.loding8 {
+    animation-delay: 53.85s;
+    background: -webkit-radial-gradient(center, circle, white, rgb(44, 44, 44), rgb(39, 39, 39), rgb(30, 30, 30), rgb(18, 18, 18), rgb(14, 14, 14), black);
+}
+
+@keyframes end-task {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes spans {
+    65% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes abo-kamal {
+    to {
+        transform: translateY(0%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes end-download {
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes loding {
+    from {
+        transform: translatey(0);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translatey(30px);
+        opacity: 1;
+    }
+}
+
